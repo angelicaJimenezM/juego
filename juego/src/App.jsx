@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import './App.css';
-import { Sele } from './trabajo/primer.jsx';
-import { Segundo } from './trabajo/segundo.jsx';
-function App() {
-  const [count, setCount] = useState(0);
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Sele } from './trabajo/Sele.jsx';
+import { Serie } from './trabajo/Serie.jsx';
 
+function App() {
   return (
     <div>
-
-   
-        <Sele/>
-
-    
+      <Router>
+        <Routes>
+          <Route path='/' element={<Sele />} />
+          <Route path='/serie' element={<Serie />} />
+        </Routes>
+      </Router>
     </div>
-    
   );
 }
+
 
 export default App;
