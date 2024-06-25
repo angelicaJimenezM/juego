@@ -10,7 +10,7 @@ return (
 </div>
 <div className='flex justify-center'>
 <main className=' w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
-<div className='anime rounded-xl bg-gray-800 p-4'>
+<div className='anime rounded-xl bg-gray-800 p-4 '>
 <p className='text-white'>Anime</p>
 </div>
 <div className='peliculas rounded-xl bg-gray-800 p-4'>
