@@ -23,11 +23,11 @@ const ImageCard = ({ src, alt, name }) => {
   };
 
   return (
-    <div className='estilo rounded-lg overflow-hidden transform skew-y-2 xl:text-4xl text-lg' onClick={handleClick}>
+    <div className='estilo rounded-lg overflow-hidden transform skew-y-2 xl:text-2xl text-xs' onClick={handleClick}>
       {showImage ? (
         <>
           <img src={src} alt={alt} className='tam w-full' />
-          <p className=' '>{name}</p>
+          <p className=''>{name}</p>
         </>
       ) : (
         <div className='bg-white h-full w-full flex items-center justify-center' style={{ transition: '.3s ease' }}>
