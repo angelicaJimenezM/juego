@@ -50,16 +50,19 @@
   background-color:rgb(72, 202, 228);
   justify-content: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  width: 70%;
-
+  /* width: 70%; */
+  
 }
 
 @media (max-width: 640px) {
   .anime, .peliculas, .series, .cantantes, .actores, .futbolistas {
     min-height: 200px;
-   
   }
 }
 .tam{
-  height: 87%;
+  height: 90%;
+}
+
+.tam2{
+  height: 81%;
 }
