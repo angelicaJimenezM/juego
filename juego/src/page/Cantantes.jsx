@@ -15,7 +15,7 @@ import adele from '../assets/Image/cantantes/Adele.png';
 import karol from '../assets/Image/cantantes/karol-g.png';
 import sam from '../assets/Image/cantantes/sam.png';
 import re_intentar from '../assets/Icons/re_cargar.png';
-import { Boton } from './Boton';
+import { Boton } from '../components/Boton';
 
 const cantantes = [
   { src: billies, alt: 'Billie', name: 'Billie', numero: 1 },
@@ -49,9 +49,9 @@ const ImageCard = ({ src, alt, name, numero }) => {
     >
       {showImage ? (
         <>
-          <img src={src} alt={alt} className='tam2 sm:h-56 w-full' />
+          <img src={src} alt={alt} className='h-40 sm:h-56 w-full mask' />
           <div className="flex flex-row justify-around">
-            <p className="xl:text-3xl">{name}</p>
+            <p className="xl:text-3xl font-lonely-coffee">{name}</p>
             <p className="xl:text-3xl">{numero}</p>
           </div>
         </>
@@ -60,7 +60,7 @@ const ImageCard = ({ src, alt, name, numero }) => {
           className='bg-white h-full w-full flex items-center justify-center'
           style={{ transition: '.3s ease' }}
         >
-          <h1 className='xl:text-8xl text-6xl'>X</h1>
+          <h1 className='xl:text-8xl text-6xl font-this-cafe'>X</h1>
         </div>
       )}
     </div>
@@ -85,16 +85,16 @@ export const Cantantes = () => {
   }, []);
 
   return (
-    <div>
+    <div className='bg-gradient-to-t from-naranja to-amarillo'>
       {randomCantante && (
         <div className="flex flex-col xl:w-96 xl:mx-auto">
-          <img src={randomCantante.src} alt={randomCantante.alt} className='xl:h-56  h-48'/>
-          <p className='text-3xl flex justify-center'>{randomCantante.name}</p>
+          <img src={randomCantante.src} alt={randomCantante.alt} className='xl:h-56  h-64 mask'/>
+          <p className='text-3xl flex justify-center font-lonely-coffee'>{randomCantante.name}</p>
         </div>
       )}
-       <div className="flex flex-row xl:gap-x-5 gap-12">
+       <div className="flex flex-row xl:gap-x-5 gap-24">
         <Boton />
-        <h1 className="xl:text-8xl text-3xl xl:mx-auto">Cantantes</h1>
+        <h1 className="xl:text-8xl text-2xl xl:mx-auto font-bold">Cantantes</h1>
         <button onClick={getRandomCantante}>
           <img src={re_intentar} alt="Reintentar" className="xl:w-20 w-14" />
         </button>

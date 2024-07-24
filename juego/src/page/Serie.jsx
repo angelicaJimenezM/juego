@@ -15,7 +15,7 @@ import madre_b from '../assets/Image/serie/madre_b.png';
 import penelope from '../assets/Image/serie/penelope.png';
 import friederich from '../assets/Image/serie/principe.png';
 import re_intentar from '../assets/Icons/re_cargar.png';
-import { Boton } from './Boton';
+import { Boton } from '../components/Boton';
 
 const series = [
   { src: eloise, alt: 'Eloise', name: 'Eloise', numero: 1 },
@@ -50,9 +50,9 @@ const ImageCard = ({ src, alt, name, numero }) => {
     >
       {showImage ? (
         <>
-          <img src={src} alt={alt} className="tam w-full" />
+          <img src={src} alt={alt} className="tam w-full mask" />
           <div className="flex flex-row justify-around">
-            <p className="xl:text-3xl">{name}</p>
+            <p className="xl:text-3xl font-lonely-coffee">{name}</p>
             <p className="xl:text-3xl">{numero}</p>
           </div>
         </>
@@ -61,7 +61,7 @@ const ImageCard = ({ src, alt, name, numero }) => {
           className="bg-white h-full w-full flex items-center justify-center"
           style={{ transition: '.3s ease' }}
         >
-          <h1 className="xl:text-8xl text-6xl">X</h1>
+          <h1 className="xl:text-8xl text-6xl font-this-cafe">X</h1>
         </div>
       )}
     </div>
@@ -86,16 +86,16 @@ export const Serie = () => {
   }, []);
 
   return (
-    <div>
+    <div className='bg-gradient-to-t from-naranja to-amarillo'>
       {randomSerie && (
         <div className="flex flex-col xl:w-96 xl:mx-auto">
-          <img src={randomSerie.src} alt={randomSerie.alt} className='xl:h-96  h-80'/>
-          <p className='text-3xl flex justify-center'>{randomSerie.name}</p>
+          <img src={randomSerie.src} alt={randomSerie.alt} className='xl:h-96  h-80 mask'/>
+          <p className='text-3xl flex justify-center font-lonely-coffee'>{randomSerie.name}</p>
         </div>
       )}
-     <div className="flex flex-row xl:gap-x-5 gap-12">
+     <div className="flex flex-row xl:gap-x-5 gap-24">
         <Boton />
-        <h1 className="xl:text-8xl text-5xl xl:mx-auto">Serie</h1>
+        <h1 className="xl:text-8xl text-5xl xl:mx-auto font-bold">Serie</h1>
         <button onClick={getRandomSerie}>
           <img src={re_intentar} alt="Reintentar" className="xl:w-20 w-14" />
         </button>

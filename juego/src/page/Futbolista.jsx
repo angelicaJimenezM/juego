@@ -15,7 +15,7 @@ import yerry_mina from '../assets/Image/futbolista/yerry_mina.png';
 import devan from '../assets/Image/futbolista/devan.png';
 import falcao from '../assets/Image/futbolista/falcao.png';
 import re_intentar from '../assets/Icons/re_cargar.png';
-import { Boton } from './Boton';
+import { Boton } from '../components/Boton';
 
 const futbolistas = [
   { src: David_Ospina, alt: 'David Ospina', name: 'Ospina', numero: 1 },
@@ -49,9 +49,9 @@ const ImageCard = ({ src, alt, name, numero }) => {
     >
       {showImage ? (
         <>
-          <img src={src} alt={alt} className='tam2 w-full' />
+          <img src={src} alt={alt} className='h-32 w-full mask' />
           <div className="flex flex-row justify-around">
-            <p className="xl:text-3xl">{name}</p>
+            <p className="xl:text-3xl font-lonely-coffee">{name}</p>
             <p className="xl:text-3xl">{numero}</p>
           </div>
         </>
@@ -60,7 +60,7 @@ const ImageCard = ({ src, alt, name, numero }) => {
           className='bg-white h-full w-full flex items-center justify-center'
           style={{ transition: '.3s ease' }}
         >
-          <h1 className='xl:text-8xl text-6xl'>X</h1>
+          <h1 className='xl:text-8xl text-6xl font-this-cafe'>X</h1>
         </div>
       )}
     </div>
@@ -85,16 +85,16 @@ export const Futbolista = () => {
   }, []);
 
   return (
-    <div>
+    <div className='bg-gradient-to-t from-naranja to-amarillo'>
       {randomFutbolista && (
         <div className="flex flex-col xl:w-96 xl:mx-auto">
-          <img src={randomFutbolista.src} alt={randomFutbolista.alt} className='xl:h-64  h-48'/>
-          <p className='text-3xl flex justify-center'>{randomFutbolista.name}</p>
+          <img src={randomFutbolista.src} alt={randomFutbolista.alt} className='xl:h-64  h-56 mask'/>
+          <p className='text-3xl flex justify-center font-lonely-coffee'>{randomFutbolista.name}</p>
         </div>
       )}
-      <div className="flex flex-row xl:gap-x-5 gap-12">
+      <div className="flex flex-row xl:gap-x-5 gap-24">
         <Boton />
-        <h1 className="xl:text-8xl text-3xl xl:mx-auto">Futbolista</h1>
+        <h1 className="xl:text-8xl text-3xl xl:mx-auto font-bold">Futbolista</h1>
         <button onClick={getRandomFutbolista}>
           <img src={re_intentar} alt="Reintentar" className="xl:w-20 w-14" />
         </button>

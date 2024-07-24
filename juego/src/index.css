@@ -1,39 +1,37 @@
+@import './font.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 * {
   font-family: "Taviraj", serif;
   font-weight: 300;
   font-style: normal;
-  
 }
 
-.anime{
+.anime {
   background-image: url("../src/assets/Image/anime.png");
-
 }
-.peliculas{
+
+.peliculas {
   background-image: url("../src/assets/Image/avengers.png");
-
 }
-.series{
+
+.series {
   background-image: url("../src/assets/Image/serie.png");
-
 }
-.cantantes{
+
+.cantantes {
   background-image: url("../src/assets/Image/cantante.png");
-
 }
-.actores{
+
+.actores {
   background-image: url("../src/assets/Image/actores.png");
 }
-.futbolistas{
-  background-image: url("../src/assets/Image/futbolistas.png");
 
+.futbolistas {
+  background-image: url("../src/assets/Image/futbolistas.png");
 }
-/* styles.css */
 
 .anime, .peliculas, .series, .cantantes, .actores, .futbolistas {
   background-position: center;
@@ -46,12 +44,11 @@
   font-size: 1.9rem;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
-.estilo{
-  background-color:rgb(72, 202, 228);
+
+.estilo {
+  background-color: rgb(194, 0, 0);
   justify-content: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  /* width: 70%; */
-  
 }
 
 @media (max-width: 640px) {
@@ -59,10 +56,21 @@
     min-height: 200px;
   }
 }
-.tam{
+
+.tam {
   height: 90%;
 }
 
-.tam2{
+.tam2 {
   height: 81%;
+}
+
+.mask {
+  mask-image: linear-gradient(black 91%, transparent );
+}
+.pricipal{
+  background-image: url('../src/assets/Image/principal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;  
+  height: 100vh;
 }

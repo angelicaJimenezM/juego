@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Lonely-Coffee';
+  src: url('/src/assets/fonts/Lonely-Coffee.ttf') format('truetype'),
+       url('/src/assets/fonts/Lonely-Coffee.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'This-Cafe';
+  src: url('/src/assets/fonts/This-Cafe.ttf') format('truetype'),
+       url('/src/assets/fonts/This-Cafe.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
