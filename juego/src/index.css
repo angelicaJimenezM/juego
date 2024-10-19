@@ -14,7 +14,7 @@
 }
 
 .peliculas {
-  background-image: url("../src/assets/Image/avengers.png");
+  background-image: url("../src/assets/Image/pelicula.png");
 }
 
 .series {
@@ -22,7 +22,7 @@
 }
 
 .cantantes {
-  background-image: url("../src/assets/Image/cantante.png");
+  background-image: url("../src/assets/Image/cantantes.png");
 }
 
 .actores {
@@ -57,9 +57,7 @@
   }
 }
 
-.tam {
-  height: 90%;
-}
+
 
 .tam2 {
   height: 81%;

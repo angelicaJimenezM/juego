@@ -49,7 +49,7 @@ const ImageCard = ({ src, alt, name, numero }) => {
     >
       {showImage ? (
         <>
-          <img src={src} alt={alt} className='h-32 w-full mask' />
+          <img src={src} alt={alt} className='h-32 xl:h-56 w-full mask' />
           <div className="flex flex-row justify-around">
             <p className="xl:text-3xl font-lonely-coffee">{name}</p>
             <p className="xl:text-3xl">{numero}</p>
@@ -57,10 +57,10 @@ const ImageCard = ({ src, alt, name, numero }) => {
         </>
       ) : (
         <div
-          className='bg-white h-full w-full flex items-center justify-center'
+          className='bg-black h-full w-full flex items-center justify-center'
           style={{ transition: '.3s ease' }}
         >
-          <h1 className='xl:text-8xl text-6xl font-this-cafe'>X</h1>
+          <h1 className='xl:text-8xl text-6xl font-sans text-wh-700 font-extrabold text-white'>X</h1>
         </div>
       )}
     </div>
@@ -83,7 +83,9 @@ export const Futbolista = () => {
   useEffect(() => {
     getRandomFutbolista();
   }, []);
-
+  const reloadPage =()=>{
+    window.location.reload();
+  }
   return (
     <div className='bg-gradient-to-t from-naranja to-amarillo'>
       {randomFutbolista && (
@@ -95,7 +97,7 @@ export const Futbolista = () => {
       <div className="flex flex-row xl:gap-x-5 gap-24">
         <Boton />
         <h1 className="xl:text-8xl text-3xl xl:mx-auto font-bold">Futbolista</h1>
-        <button onClick={getRandomFutbolista}>
+        <button onClick={reloadPage}>
           <img src={re_intentar} alt="Reintentar" className="xl:w-20 w-14" />
         </button>
       </div>

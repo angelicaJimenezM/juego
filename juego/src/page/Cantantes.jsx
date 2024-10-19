@@ -57,10 +57,10 @@ const ImageCard = ({ src, alt, name, numero }) => {
         </>
       ) : (
         <div
-          className='bg-white h-full w-full flex items-center justify-center'
+          className='bg-black h-full w-full flex items-center justify-center'
           style={{ transition: '.3s ease' }}
         >
-          <h1 className='xl:text-8xl text-6xl font-this-cafe'>X</h1>
+          <h1 className='xl:text-8xl text-6xl font-lonely-coffee text-white font-extrabold'>X</h1>
         </div>
       )}
     </div>
@@ -83,7 +83,9 @@ export const Cantantes = () => {
   useEffect(() => {
     getRandomCantante();
   }, []);
-
+  const reloadPage=()=>{
+    window.location.reload();
+  }
   return (
     <div className='bg-gradient-to-t from-naranja to-amarillo'>
       {randomCantante && (
@@ -95,7 +97,7 @@ export const Cantantes = () => {
        <div className="flex flex-row xl:gap-x-5 gap-24">
         <Boton />
         <h1 className="xl:text-8xl text-2xl xl:mx-auto font-bold">Cantantes</h1>
-        <button onClick={getRandomCantante}>
+        <button onClick={reloadPage}>
           <img src={re_intentar} alt="Reintentar" className="xl:w-20 w-14" />
         </button>
       </div>

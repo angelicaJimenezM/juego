@@ -5,7 +5,7 @@ import volver from "../assets/Icons/volver.png";
 export const Boton = () => {
   return (
     <div className="xl:w-16 w-10">
-      <Link to={'/Sele'}>
+      <Link to={'/'}>
         <img src={volver} alt="Volver" />
       </Link>
     </div>
