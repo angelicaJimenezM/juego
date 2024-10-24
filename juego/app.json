@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "MiJuego",
+    "slug": "mi-juego-unico",
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "70b7b2e1-feb6-441e-a8dc-267504338054"
+      }
+    },
+    "android": {
+      "package": "com.angelicajimenez.mijuegounico"
+    },
+    "ios": {
+      "bundleIdentifier": "com.angelicajimenez.mijuegounico"
+    }
+  }
+}
